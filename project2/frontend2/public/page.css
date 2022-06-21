@@ -1,0 +1,78 @@
+*
+{
+    font-family: sans-serif;
+}
+#container
+{
+    height: 90vh;
+    border: 2px solid black;
+    /* width: 55%; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(194, 193, 193);
+    text-align: center;
+    overflow: auto;
+    border-radius: 5px;
+}
+tr td select
+{
+    background-color: rgb(194, 193, 193);
+    width:50%;
+    text-align:center;
+    padding:6px;
+}
+body
+{
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+}
+.choose
+{
+    margin: 0;
+    position: relative;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#unlog
+{
+    position: absolute;
+    bottom: 10%;
+}
+button
+{
+    margin-top: 5px;
+}
+.hidden
+{
+    display: none;
+}
+.imag
+{
+    height: 400px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+table, th , td
+{
+    border: 1px solid;
+  
+    
+}
+table
+{
+    width: 100%;
+    margin-top: 25px;
+   
+   
+}
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+th.fitwidth
+{
+    width: 1px;
+    white-space: nowrap;
+}
