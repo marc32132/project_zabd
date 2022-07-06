@@ -23,7 +23,7 @@ fetch("/admin/allstudents")
                 <td>${user.mail}</td>
 
                 <td><form action="/admin/allusersDel" method="post">
-                <input class="hidden" type="text" name="login" value="${user.login}">
+                <input class="hidden" type="text" name="login" value="${user._id}">
                 <input class="btn btn-secondary" type="submit" value="delete" id="deleted">
             </form></td>
             <tr>

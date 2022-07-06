@@ -80,7 +80,7 @@ router.route('/login').post((req, res) => {
                             }
                             else if(foundUser.position == position && position == 'Employee'){
                             
-                            const user = {userName: login, position: foundUser.position, name: foundUser.name, surname: foundUser.surname}
+                            const user = {userName: login, position: foundUser.position, name: foundUser.name, surname: foundUser.surname, _id:foundUser._id}
 
                             const accessToken = generateAccessToken(user);
                             
@@ -107,7 +107,7 @@ router.route('/login').post((req, res) => {
                     
                         if(result === true){
                             if(foundUser.position == position && position == 'Student'){
-                            const user = {userName: login, position: foundUser.position, name: foundUser.name, surname: foundUser.surname}
+                            const user = {userName: login, position: foundUser.position, name: foundUser.name, surname: foundUser.surname, _id:foundUser._id}
 
                             const accessToken = generateAccessToken(user);
                             res.cookie('jwt', accessToken, {maxAge: 1000*60*20});

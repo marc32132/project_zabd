@@ -89,7 +89,7 @@ document.getElementById("logoutLink").onclick = function () {
                             let students = year.students;
                             for(let student of students){
                     
-                                if(user.login == student){
+                                if(user._id == student){
                                     name = user.name;
                                     surname = user.surname;
                                 
@@ -97,7 +97,7 @@ document.getElementById("logoutLink").onclick = function () {
                                 out3 += `
                                 
                                     <tr>
-                                    <td width="40%">${student}</td>
+                                    <td width="40%">${user.login}</td>
                                     <td width="40%">${name}</td>
                                     <td width="40%">${surname}</td>
                                     <td>${user.year}</td>
@@ -114,7 +114,7 @@ document.getElementById("logoutLink").onclick = function () {
                             }
                             }   
                         
-                            if(year.students.includes(user.login) ){
+                            if(year.students.includes(user._id) ){
                                 continue;
                             }
                             out5 += `<tr>
@@ -125,7 +125,7 @@ document.getElementById("logoutLink").onclick = function () {
                             <td><form action="/yearGroup/updateYear" method="post">
                             <input class="hidden" type="text" name="groupName" value="${year.groupName}">
                             <input class="hidden" type="text" name="year" value="${year.year}">
-                            <input class="hidden" type="text" name="students" placeholder="name" value="${user.login}">
+                            <input class="hidden" type="text" name="students" placeholder="name" value="${user._id}">
                             <input class="btn btn-secondary" type="submit" value="add">
                             </form></td>
                                 </tr>`

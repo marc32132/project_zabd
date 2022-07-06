@@ -20,7 +20,7 @@ document.getElementById("logoutLink").onclick = function () {
   
         for(let classO of classeOs){
             
-                if(classO.participants.includes(user.name) ) {
+                if(classO.participants.includes(user._id) ) {
                     console.log("username: ", user.name);
                     continue;
                      }
@@ -32,7 +32,7 @@ document.getElementById("logoutLink").onclick = function () {
                     <td><form action="/class/updateClass" method="post">
                     <input class="hidden" type="text" name="className" value="${classO.className}">
                     <input class="hidden" type="text" name="groupNumber" value="${classO.groupNumber}">
-                    <input class="hidden" type="text" name="participants" placeholder="name" value="${user.userName}">
+                    <input class="hidden" type="text" name="participants" placeholder="name" value="${user._id}">
                     <input class="btn btn-secondary" type="submit" value="join">
                   </form></td>
                 <tr>

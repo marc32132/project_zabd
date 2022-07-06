@@ -34,7 +34,7 @@ fetch("/class/allclasses")
       .then(function(users){
       for(let user of users){  
       classO.participants.forEach(student => {
-        if(student == user.login){
+        if(student == user._id){
         out3 += `
         
             <tr>

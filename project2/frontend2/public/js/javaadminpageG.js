@@ -62,7 +62,7 @@ document.getElementById("logoutLink").onclick = function () {
                             let students = classO.participants;
                             for(let student of students){
                     
-                                if(user.login == student){
+                                if(user._id == student){
                                     name = user.name;
                                     surname = user.surname;
                                 
@@ -70,7 +70,7 @@ document.getElementById("logoutLink").onclick = function () {
                                 out3 += `
                                 
                                     <tr>
-                                    <td width="40%">${student}</td>
+                                    <td width="40%">${user.login}</td>
                                     <td width="40%">${name}</td>
                                     <td width="40%">${surname}</td>
                                     <td width="40%"><form action="/class/removeParticipant" method="post">
@@ -85,7 +85,7 @@ document.getElementById("logoutLink").onclick = function () {
                                 `
                             }
                             }   
-                            if(classO.participants.includes(user.login) ){
+                            if(classO.participants.includes(user._id) ){
                                 continue;
                             }
                             out5 += `<tr>
@@ -95,7 +95,7 @@ document.getElementById("logoutLink").onclick = function () {
                             <td><form action="/class/updateClass" method="post">
                             <input class="hidden" type="text" name="className" value="${classO.className}">
                             <input class="hidden" type="text" name="groupNumber" value="${classO.groupNumber}">
-                            <input class="hidden" type="text" name="participants" placeholder="name" value="${user.login}">
+                            <input class="hidden" type="text" name="participants" placeholder="name" value="${user._id}">
                             <input class="btn btn-secondary" type="submit" value="add">
                             </form></td>
                                 </tr>`
